@@ -31,6 +31,15 @@ console.log(Math.abs(-5));
 console.log(Matha.round(-5.998));
 console.log(Matha.round(-5.998));
 
+console.log(Math.random());
+console.log(Math.random()*10+1); 
+// if you multiply 10 with something the digits will shift to right
+// 0.98 => 9.8
+// with the help of +1 , if the digit is 
+// 0.03 => 0.3 to avoid this we use +1 it will provide 1.3
+
+
+
 
 
 
