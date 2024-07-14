@@ -85,8 +85,8 @@ console.log(`Hello! ${name} Enjoy your ${drinks}`)
 
 
 let dlAge = 34
-let compatibility = dlAge >= 18 ? "You can drive " 
-                            :dlAge<=0 ? " Enter a Valid age ":"you cant apply for licence";
+let compatibility = dlAge >= 18 ? "You can drive "
+    : dlAge <= 0 ? " Enter a Valid age " : "you cant apply for licence";
 
 console.log(compatibility);
 
@@ -107,26 +107,65 @@ let operator = "-"
 // let op = operator.split(",")
 // let condition = true; 
 // // let selectedOperator = condition ? op[0] : op[1];
-    switch (operator) {
-        case '+':
-            console.log(inputOne + inputTwo)
-            break;
-        case '-':
-            console.log(inputOne - inputTwo)
-            break;
-        case '*':
-            console.log(inputOne * inputTwo)
-            break;
-        case '/':
-            console.log(inputOne / inputTwo)
-            break;
+switch (operator) {
+    case '+':
+        console.log(inputOne + inputTwo)
+        break;
+    case '-':
+        console.log(inputOne - inputTwo)
+        break;
+    case '*':
+        console.log(inputOne * inputTwo)
+        break;
+    case '/':
+        console.log(inputOne / inputTwo)
+        break;
 
 
+    default:
+        break;
+}
+// feature 2
+let numb1 = 12
+let numb2 = 15
+
+let comparision = ">,<,<=,>=,==,==="
+let comp= comparision.split(",")
+
+for (let i =0 ; i<comp.length ;i++)
+{
+    selectOP = comp[i]
+    switch(selectOP){
+        case '>':
+            console.log(">"+numb1>numb2);
+            break;
+        case '<':
+            console.log("<"+numb1<numb2);
+            break;
+        case '<=':
+            
+            console.log(numb1<=numb2);
+            break;
+        case '>=':
+            console.log(">="+numb1>=numb2);
+            break;
+        case '==':
+            console.log("== " +numb1==numb2);
+            break;
+        case '===':
+            console.log("==="+numb1===numb2);
+            break;
         default:
             break;
+
+         
     }
+}
 
 
-let input = 10 ;
+
+
+// feature  3
+let input = 10;
 let res = input >= 0 ? "Positive " : "negative";
 console.log(res);
