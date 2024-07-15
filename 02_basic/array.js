@@ -11,10 +11,10 @@ console.log(array);
 // array.pop("sonu");
 console.log("*********************8888");
 array.unshift(9);
+console.log("** Unshift");
 console.log(array);
 array.shift()
-console.log(array.includes(9)
-);
+console.log(array.includes(9));
 console.log(array.indexOf("soumya"));
 
 // There is two methods know as slice and splice 
