@@ -46,11 +46,13 @@ console.log(num1 <= num2)
 //task 10
 
 console.log(num1 == num2)
-console.log(num1 === num2)
 
 //task 11
 
+// let num1 = 22
+// let num2 = 23
 if (num1 == 10 && num2 == 22) {
+    console.log(num1 === num2)
     console.log("mathched");
 
 }
@@ -60,8 +62,8 @@ else {
 
 //task 12
 
-if (num1 == 10 || num2 == 22) {
-    console.log("||" + "mathched");
+if (num1 == 22 || num2 == 23) {
+    console.log( "mathched");
 
 }
 else {
