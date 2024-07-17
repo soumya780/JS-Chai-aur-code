@@ -34,3 +34,46 @@ const obj3 ={5:"e",6:"f"}
 
 const obj4 = {...obj1 , ...obj2 , ...obj3}
 console.log(obj4);
+
+
+
+//object destructuring
+
+const course= {
+    courseName : "MERN stack dev",
+    coursePrice : 2999.00,
+    courseInstructor : "komol"
+
+}
+
+course.courseInstructor
+
+// const {courseInstructor } = course
+// In this way we can deconstruct the object
+// Soo next time while accesing the value we can just write
+// console.log(courseInstructor);
+
+
+// Else we can also give courseInstructor a small name to access
+const {courseInstructor : Teacher} =course
+console.log(Teacher);
+
+
+
+ // In API format the datacomes in this format :
+//  {
+//     "name" : "soumya",
+//     "course" : "sigma developer",
+//     "fees" : 1000
+//  }
+
+// OR ELSE The data of api come in array format 
+
+[
+    {
+        
+    },
+    {
+
+    }
+]
