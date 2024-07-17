@@ -69,11 +69,13 @@ console.log(Teacher);
 
 // OR ELSE The data of api come in array format 
 
-[
-    {
+// [
+//     {
         
-    },
-    {
+//     },
+//     {
 
-    }
-]
+//     }
+// ]
+
+// 

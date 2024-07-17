@@ -36,6 +36,30 @@ addStr("Soumya","Sanjana")
 
 //Task 5
 
+// Arrow function 
+console.log("**** arrow funct.");
+
+let add = (inputOne , inputtwo) => inputOne+inputtwo
+//function_name = (parameters) => { operations }
+console.log(add(2,3));
+
+// Task 6
+const name = "soumya"
+let isPresent = (event)=>{
+    for(let i = 0;i<=name.length;i++)
+    {
+        if(name.charAt(i) === event){
+            return true
+        }
+        else{
+            
+            return false
+        }
+    }
+       
+}
+
+console.log(isPresent("k")) 
 
 
 

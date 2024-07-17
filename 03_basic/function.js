@@ -68,4 +68,5 @@ function newArray (getArr){
 // newArray(myArr) it call the myArray
 
 newArray([12,355,2435,65734,35,45,4,545,6]) 
+
 // This way we can give a new array in the arguments
