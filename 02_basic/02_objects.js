@@ -4,8 +4,8 @@ tinderUser.id = "229_sam"
 tinderUser.name = "Samkaran"
 tinderUser.loggedIn = true
 
-// console.log(tinderUser);
-// console.log(tinderUser["id"]);
+console.log(tinderUser)
+console.log(tinderUser["id"])
 
 const newUser = {
     email: "some@gmail",

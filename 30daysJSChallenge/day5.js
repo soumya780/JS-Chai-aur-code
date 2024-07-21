@@ -39,6 +39,7 @@ addStr("Soumya","Sanjana")
 // Arrow function 
 console.log("**** arrow funct.");
 
+
 let add = (inputOne , inputtwo) => inputOne+inputtwo
 //function_name = (parameters) => { operations }
 console.log(add(2,3));
