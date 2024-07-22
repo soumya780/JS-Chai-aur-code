@@ -9,7 +9,7 @@ const coding = ["js","cpp","java","css"]
 
 // or else we can first create a function and use that
 
-function printMe (item){
+function printMe (item){ 
     // console.log(item);
 }
 
