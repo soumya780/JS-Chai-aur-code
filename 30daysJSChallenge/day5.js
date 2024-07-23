@@ -83,3 +83,38 @@ function greet (name , age ){
 greet ("Kamal",age)
 
 //Task 9
+
+// higher order function 
+
+console.log("------Task 9------");
+const message = function (fn , time){
+ for(i = 1 ; i<=time ;i++)
+ {
+    fn()
+ }
+}
+
+const welcome = () => console.log("hello")
+
+message (welcome,4)
+
+
+// Task 10 
+console.log("Task 10");
+
+const number = 3
+console.log(`The given number is : ${number}`);
+let main = function (f1,f2,val){
+    const result = f1 (val)
+    console.log(`The result is : ${result}`);
+    const final = f2 (result)
+    console.log(`the final value is : ${final}`);
+    return final 
+}
+
+
+const fun1 = (num) => num*2 
+const fun2 = (num) => num*num    
+
+main(fun1,fun2,number)
+

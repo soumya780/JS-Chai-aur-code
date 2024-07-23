@@ -17,6 +17,20 @@ arr.shift("Ronit")
 console.log(arr);
 
 //Activity 3
+// Array methods 
+
+let array1 = [1,2,35,5,6,7,6]
+console.log("-----Map------");
+const square = array1.map( (val) => val*val  )
+// console.log(square);
+// -----Map------
+// [
+//    1,  4, 1225,
+//   25, 36,   49,
+//   36
+// ]
+
+const Rockstar = [ {},{},{},  ]
 
 
 
