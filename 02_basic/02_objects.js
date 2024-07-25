@@ -27,11 +27,12 @@ const obj1 ={1:"a",2:"b"}
 const obj2 ={3:"c",4:"d"}
 const obj3 ={5:"e",6:"f"}
 
-// const combineObj = Object.assign({},obj1,obj2,obj3)
-// console.log(combineObj);
+console.log("_-_---__-_-_--");
+const combineObj = Object.assign({},obj1,obj2,obj3)
+console.log(combineObj);
 
 // Else We can Use the Spread Operation 
-
+console.log("--- spread operation ------");
 const obj4 = {...obj1 , ...obj2 , ...obj3}
 console.log(obj4);
 
