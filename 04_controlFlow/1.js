@@ -6,9 +6,14 @@ const userLoggedIn = true
 const card = true
 const userLoggedinEmail = true
 if (userLoggedIn && card){
-    console.log("You can purchase things.")
+    // console.log("You can purchase things.")
 }
 if (userLoggedIn || userLoggedinEmail){
-    console.log("user can buy.");
+    // console.log("user can buy.");
         
+}
+
+let array = [1,24,5,32]
+for( let    i = 0 ; i<array.length;i++){
+    console.log(i);
 }
