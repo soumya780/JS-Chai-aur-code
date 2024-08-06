@@ -2,7 +2,7 @@ const randomColor = function () {
     const hex = '0123456789ABCDEF'
     // it is the range of hex code
 
-    let  color = '#'
+    let color = '#'
     // it will start from "#122FBB"
     for (let i = 0; i < 6; i++)
     // i<6 because hex code is of 6 digits
@@ -12,18 +12,21 @@ const randomColor = function () {
     return color;
 
 }
-let setInterId 
+let setInterId
 // randomColor()
 const startChangingcolor = function () {
-    const changeBgColor = function () {
-        document.body.style.backgroundColor = randomColor()
-        document.body.style.color=randomColor()
+    if (!setInterId) {
+        const changeBgColor = function () {
+            document.body.style.backgroundColor = randomColor()
+            document.body.style.color = randomColor()
+        }
+        setInterId = setInterval(changeBgColor, 1000)
     }
-    setInterId = setInterval(changeBgColor, 1000)
 }
 const stopChangingColor = function () {
-    clearInterval(setInterId)
-    setInterId = null;
+        clearInterval(setInterId)
+        setInterId = null;
+
 }
 
 document.querySelector('#start').addEventListener('click', startChangingcolor)
