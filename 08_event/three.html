@@ -1,17 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Async</title>
-</head>
-<body>
-    <h1>Chai Aur Code</h1>
-    <button id="stop">stop</button>
-    <button id="start">stop</button>
+    <!DOCTYPE html>
+    <html lang="en">
 
-</body>
-<script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Async</title>
+    </head>
 
-</script>
-</html>
+    <body>
+        <h1>Chai Aur Code</h1>
+        <button id="start">start</button>
+        <br>
+        <br>
+        <button id="stop">stop</button>
+
+    </body>
+    <script>
+        let interval
+        const name = function (str) {
+            const date = new Date()
+            const sec = date.getSeconds()
+            console.log(str, sec);
+        }
+
+        document.querySelector('#start').addEventListener('click', function (e) {
+            if(!interval){
+                // let interval = setInterval(name , 2000 , "Soumya Bhai")
+                // Here the problem arised because i used let ,
+                // while using let it created a new variable in the scope.
+                //so we cant acccess that outside the scope of #start
+                interval = setInterval(name,2000,"Helo! Soumya..")
+                console.log('start')
+            }
+        })
+
+        document.querySelector('#stop').addEventListener('click',function(e){
+            if(interval){
+                clearInterval(interval);
+                interval = null;
+                console.log('stopped!');   
+            }
+        })
+
+
+
+
+    </script>
+
+    </html>
