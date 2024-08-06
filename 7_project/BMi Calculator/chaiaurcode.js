@@ -5,8 +5,8 @@ const form = document.querySelector('form')
 // const weight = document.querySelector('#weight')
 
 // we cant select the items of the form out side from it ,
-// we have to call them inside the eventwe write the value outside the event
-//  it will run the scriot in first and will take zero as ainput but 
+// we have to call them inside the event write the value outside the event
+//  it will run the script in first and will take zero as input but 
 // here our priority is to take value when the user clicks the submit
 // if 
 
