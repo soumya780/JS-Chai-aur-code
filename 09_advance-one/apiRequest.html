@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api-request</title>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+    }
+
+    #button {
+        margin: 20px;
+        padding: 7px;
+    }
+
+    #button:hover {
+        cursor: pointer;
+    }
+
+    .card {
+        background-color: rgba(104, 103, 103, 0.701);
+        height: 400px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 20px;
+    }
+
+    .box-1 img {
+        border-radius: 20px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .box-2 p {
+        font-size: 20px;
+        color: azure;
+    }
+
+    .box-2 a {
+        font-size: 20pxś;
+        color: azure;
+        text-decoration: none;
+    }
+</style>
+
+<body style="background-color: #212121; color: white;">
+    <!-- 0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete. -->
+    <div class="content">
+        <button id='button'>Click here for info</button>
+        <div class="card">
+            <div class="box-1">
+
+            </div>
+            <div class="box-2">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const requestUrl = 'https://randomuser.me/api/'
+    // const xhr = new  XMLHttpRequest()
+    // xhr.open('GET', requestUrl)
+    // xhr.onreadystatechange = function (){
+    //     console.log(xhr.readyState);
+    //     if (xhr.readyState === 4) {
+    //         console.log(this.responseText);
+
+    //     }
+    // }
+    // xhr.send()
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', requestUrl)
+    let data
+    let imgSrc
+    let nameUser
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            console.log(this.responseText);
+            data = JSON.parse(this.responseText)
+            imgSrc = data.results[0].picture.large
+            const { title, first, last } = data.results[0].name
+            nameUser = title + " " + first + " " + last
+            console.log(nameUser);
+        }
+    }
+    xhr.send()
+    // let boxOneContent = document.createElement('div');
+    // let boxTwoContent = document.createElement('div');
+    let boxOne = document.querySelector('.box-1')
+    let boxTwo = document.querySelector('.box-2')
+
+    document.querySelector('#button').addEventListener('click', function (e) {
+        boxOne.innerHTML = `
+             <img src="${imgSrc}" alt="Image">
+        `
+        boxTwo.innerHTML = `
+            <p>${nameUser}</p>
+            <a href="${imgSrc}">Click for image source</a>
+        `
+
+        // boxOneContent.innerHTML = `
+        //     <img src="${imgSrc}" alt="Image">
+        // `;
+        // boxTwoContent.innerHTML = `
+        //     <p>${nameUser}</p>
+        //     <a href="${imgSrc}">Click for image source</a>
+        // `;
+
+        // let boxOne = document.querySelector('.box-1');
+        // let boxTwo = document.querySelector('.box-2');
+
+        // boxOne.appendChild(boxOneContent);
+        // boxTwo.appendChild(boxTwoContent);
+    })
+</script>
+
+</html>
